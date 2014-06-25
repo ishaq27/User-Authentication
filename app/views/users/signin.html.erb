@@ -1,0 +1,16 @@
+<h1>SignIn</h1>
+<%=form_for @user, :url => '/users/authenticate' do |f|%>
+	<%=f.label "User name"%></br>
+	<%=f.text_field :username, required: true%></br>
+	<%=f.label "Password" %></br>
+	<%=f.password_field :password, required: true%><br>
+	<%=f.submit 'Signin'%></br>
+	I don't have account <%= link_to 'Register', :action => 'signup' %>
+	<%end%>
+
+	<script>
+	$('#new_user').validate({});
+
+	</script>
+
+

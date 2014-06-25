@@ -1,0 +1,30 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+<h1>SignUp</h1>
+<p class ="error"></p>
+
+
+<%=form_for @user do |f|%>
+
+	<%=f.label "User name"%></br>
+	<%=f.text_field :username, required: true%><label id = "userName"></label></br>
+
+	<%=f.label "Email"%></br>
+	<%=f.text_field :email, required: true, email: true%> <!--<label id = "incorrectEmail"></label> --></br>
+
+
+	<%=f.label "Password" %></br>
+	<%=f.password_field :password, required: true, minlength: 6%><!--<label id = "incorrectPassword"></label> --></br>
+	<%=f.label "Confirm Password" %></br>
+	<%=password_field_tag 'confirm_password', nil, equalTo: "#user_password"%></br>
+
+	<%=f.submit 'Signup'%></br>
+	I have already account <%= link_to 'SignIn', :action => 'signin' %>
+	<%end%>
+  </div>
+</div>
+	<script type="text/javascript">	
+$('#new_user').validate({});
+	</script>

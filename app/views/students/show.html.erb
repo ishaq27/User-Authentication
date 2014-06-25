@@ -1,0 +1,8 @@
+<h1>Student Info</h1>
+<p>Studnet Name:<%= @student.name%></p>
+<p>Roll Number :<%= @student.rollno%></p>
+<p>Study Prog  :<%= @student.program%></p>
+<p>Email Add   :<%= @student.email%></p>
+<%= link_to "index", students_path %>
+<%= link_to "edit", edit_student_path(@student)%>
+<%= link_to 'destroy', student_path, method: :delete, data:{confirm: 'are you sure, You want to delete this record?'}%>

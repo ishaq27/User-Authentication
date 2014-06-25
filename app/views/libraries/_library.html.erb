@@ -1,0 +1,22 @@
+<%= form_for(@library) do |l|%>
+<div class="field">
+	<%=l.label "Book Name"%></br>
+	<%=l.text_field :bookName%>
+</div>
+
+<div class = "field">
+	<%=l.label :auther%></br>
+	<%=l.text_field :auther%>
+</div>
+<div class="field">
+	<%=l.label "Subject"%></br>
+	<%=l.text_field :subject%>
+</div>
+
+<div class = "field">
+	<%=l.label "No Of Copy"%></br>
+	<%=l.text_field :noofcopy%>
+</div>
+
+<p><%=l.submit %></p>
+<%end%>
